@@ -41,8 +41,7 @@ def GetHistoryData(Code, BeginTime, EndTime):
     
     
 # 更新数据
-def updateData(endTime):
-    beginTime = 20130515
+def updateData(beginTime, endTime):
     if endTime <= beginTime:
         print("结束时间必须大于20130515，程序将结束。")
         os.exit(1)
@@ -55,7 +54,9 @@ def updateData(endTime):
     
     
 if __name__ == "__main__":
-    updateData(20190510)
+    beginTime = 20120515
+    endTime = 20200425
+    updateData(beginTime, endTime)
     print("历史数据获取成功")
     #date = TransfDate2Datetime("2010-01-10")
 #    print(date, dir(date))

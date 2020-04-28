@@ -46,7 +46,7 @@ if __name__ == "__main__":
     sp.random.seed(12345)
     x = sp.random.normal(0.08, 0.2, 1000)
     fig = plt.figure()
-    plt.hist(x, 15, normed = True)
+    plt.hist(x, 15, density = True)
     fig.savefig("norm_hist.png")
     #对数正态分布
     x = np.linspace(0, 3, 200)

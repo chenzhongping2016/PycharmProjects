@@ -14,7 +14,7 @@ def Display(data):
     ax4 = fig.add_subplot(2,2,4)
     #用各种不同的形式画图
     ax1.plot(data.收益率)
-    ax2.hist(data.收益率, bins =10, alpha = 0.8, facecolor = 'b', normed = 1)
+    ax2.hist(data.收益率, bins =10, alpha = 0.8, facecolor = 'b', density = 1)
     ax3.scatter(range(len(data)), data.收益率, marker ='.')
     ax4.plot(data.收益率, 'k--')
     
@@ -40,7 +40,7 @@ def Display(data):
     data.收益率.plot(kind = 'bar', xticks = [0, 40, 80, 120, 160, 200])
     fig.savefig("pandas作图.png")
     fig = plt.figure()
-    data.收益率.hist(bins =20, normed = True)
+    data.收益率.hist(bins =20, density = True)
     fig.savefig("pandas作图2.png")
     
     
